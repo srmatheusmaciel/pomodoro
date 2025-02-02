@@ -6,7 +6,7 @@ export function Header() {
   return (
     <HeaderContainer>
       <span>
-        <img src={logoNewsFeed} alt="" />
+        <img src={logoNewsFeed} alt="Uma seta para direita e uma pra esquerda" title="Logo NewsFeed"  />
       </span>
       <nav>
         <NavLink to="/" title="Timer">
