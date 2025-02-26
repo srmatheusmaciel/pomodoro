@@ -1,50 +1,135 @@
-# React + TypeScript + Vite
+# Pomodoro - Focus & Productivity App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+## 📋 Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Pomodoro is a modern React application designed to help users implement the Pomodoro Technique for improved productivity and focus. This technique breaks work into intervals, traditionally 25 minutes, separated by short breaks.
 
-## Expanding the ESLint configuration
+The app features:
+- Customizable work/break intervals
+- Task tracking
+- Complete history of your productivity sessions
+- Clean, intuitive UI
+- Responsive design for all devices
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## 🚀 Getting Started
 
-- Configure the top-level `parserOptions` property like this:
+### Prerequisites
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+- Node.js (v16 or higher)
+- npm or yarn
+
+### Installation
+
+1. Clone the repository
+```bash
+git clone https://github.com/srmatheusmaciel/pomodoro.git
+cd pomodoro
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+2. Install dependencies
+```bash
+npm install
+# or
+yarn
 ```
+
+3. Start development server
+```bash
+npm run dev
+# or
+yarn dev
+```
+
+4. Open your browser and navigate to `http://localhost:5173`
+
+## 💻 Usage
+
+- **Start Timer**: Set your task name, choose a time interval, and click start
+- **Pause/Resume**: Control your current timer as needed
+- **History View**: Track your past sessions and productivity patterns
+
+## 🏗️ Project Structure
+
+```
+pomodoro/
+├── public/          # Static assets
+├── src/
+│   ├── @types/      # TypeScript type definitions
+│   ├── assets/      # Images and resources
+│   ├── components/  # Reusable UI components
+│   │   └── Header/  # Navigation component
+│   ├── layouts/     # Layout templates
+│   │   └── DefaultLayout/ # Main application layout
+│   ├── pages/       # Application pages
+│   │   ├── Home/    # Timer and task input page
+│   │   └── History/ # Past sessions records
+│   ├── styles/      # Global styles and themes
+│   ├── App.tsx      # Main application component
+│   ├── main.tsx     # Application entry point
+│   └── Router.tsx   # Application routing
+└── package.json     # Project dependencies and scripts
+```
+
+## 🛠️ Built With
+
+- [React](https://reactjs.org/) - UI library
+- [TypeScript](https://www.typescriptlang.org/) - Static type checking
+- [Vite](https://vitejs.dev/) - Build tool and development server
+- [React Router](https://reactrouter.com/) - Navigation and routing
+- [Styled Components](https://styled-components.com/) - Component styling
+- [React Hook Form](https://react-hook-form.com/) - Form handling with validation
+- [Zod](https://github.com/colinhacks/zod) - Schema validation
+- [date-fns](https://date-fns.org/) - Date manipulation
+- [Phosphor Icons](https://phosphoricons.com/) - Modern icon library
+
+## 📱 Responsive Design
+
+PomodoroTimer is designed to work flawlessly on:
+- Desktops and laptops
+- Tablets
+- Mobile devices
+
+## 🧪 Quality Assurance
+
+- ESLint for code quality
+- TypeScript for type safety
+- Proper code organization and best practices
+
+## 🔄 Development Commands
+
+```bash
+# Start development server
+npm run dev
+
+# Build for production
+npm run build
+
+# Run linting
+npm run lint
+
+# Preview production build
+npm run preview
+```
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## 📝 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+## 🙏 Acknowledgments
+
+- [Francesco Cirillo](https://francescocirillo.com/pages/pomodoro-technique) for creating the Pomodoro Technique
+
+---
+
+<div align="center">
+  <p>Made with ❤️ by Matheus</p>
+</div>
