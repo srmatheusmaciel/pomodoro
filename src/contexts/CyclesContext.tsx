@@ -49,6 +49,7 @@ import { createContext, ReactNode, useState } from 'react'
        state.map((cycle) => {
          if (cycle.id === activeCycleId) {
            return { ...cycle, finishedDate: new Date() }
+         // biome-ignore lint/style/noUselessElse: <explanation>
          } else {
            return cycle
          }
@@ -70,7 +71,7 @@ import { createContext, ReactNode, useState } from 'react'
      setActiveCycleId(id)
      setAmountSecondsPassed(0)
  
-     // reset()
+     
    }
  
    function interruptCurrentCycle() {
@@ -78,6 +79,7 @@ import { createContext, ReactNode, useState } from 'react'
        state.map((cycle) => {
          if (cycle.id === activeCycleId) {
            return { ...cycle, interruptedDate: new Date() }
+         // biome-ignore lint/style/noUselessElse: <explanation>
          } else {
            return cycle
          }
